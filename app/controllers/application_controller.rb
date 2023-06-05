@@ -1,9 +1,11 @@
 class ApplicationController < Sinatra::Base
-  set :default_content_type, 'application/json'
+    # ...
   
-  # Add your routes here
-  get "/" do
-    { message: "Good luck with your project!" }.to_json
+    error ActiveRecord::RecordNotFound do
+      { error: 'Record not found' }.to_json
+    end
+  
+    error 500 do
+      { error: 'Internal server error' }.to_json
+    end
   end
-
-end

@@ -12,6 +12,10 @@ gem "thin", "~> 1.8"
 # https://github.com/rack/rack-contrib
 gem "rack-contrib", "~> 2.3"
 
+# An object serializer for JSON and other formats
+# https://github.com/rails-api/active_model_serializers
+gem 'active_model_serializers', '~> 0.10'
+
 # More Rack middleware! Used to handle CORS requests
 # https://github.com/cyu/rack-cors
 gem "rack-cors", "~> 1.1"
