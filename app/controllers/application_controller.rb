@@ -5,7 +5,7 @@ class ApplicationController < Sinatra::Base
         surahs.to_json(include: :verses)
       end
     
-      get '/surahs' do
+      get '/surahs/:id' do
         surah = Surah.find(params[:id])
         surah.to_json(include: :verses)
       end
